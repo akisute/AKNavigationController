@@ -22,7 +22,7 @@ pod "AKNavigationController"
 
 ## Author
 
-Ono Masashi, masashi.ono@linecorp.com
+Ono Masashi, akisutesama@gmail.com
 
 ## License
 

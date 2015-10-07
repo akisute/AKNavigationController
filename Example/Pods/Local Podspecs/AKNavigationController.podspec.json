@@ -1,0 +1,25 @@
+{
+  "name": "AKNavigationController",
+  "version": "0.1.0",
+  "summary": "A short description of AKNavigationController.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/AKNavigationController",
+  "license": "MIT",
+  "authors": {
+    "Ono Masashi": "masashi.ono@linecorp.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/AKNavigationController.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "AKNavigationController": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}
