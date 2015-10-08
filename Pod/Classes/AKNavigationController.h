@@ -21,6 +21,7 @@
 - (nullable NSArray<__kindof UIViewController *> *)popToViewController:(nonnull UIViewController *)viewController animated:(BOOL)animated;
 - (nullable NSArray<__kindof UIViewController *> *)popToRootViewControllerAnimated:(BOOL)animated;
 
+@property(nullable, nonatomic,readonly,strong) UIViewController *rootViewController;
 @property(nullable, nonatomic,readonly,strong) UIViewController *topViewController;
 @property(nullable, nonatomic,readonly,strong) UIViewController *visibleViewController;
 

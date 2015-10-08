@@ -20,6 +20,7 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		C52736F41BC6551300373F63 /* AKSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C52736F31BC6551300373F63 /* AKSampleViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C529CFB31BC25AD300BCB99A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C529CFB21BC25AD300BCB99A /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		F745C11F4334E86E67377534 /* Pods_AKNavigationController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AB53531875FA5558FC8866 /* Pods_AKNavigationController_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F8AE80370DED34B8C30FF23E /* Pods_AKNavigationController_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 480FA786FA1E24313A6CE1BB /* Pods_AKNavigationController_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -61,6 +62,8 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B264B9371BED9BD1EA534724 /* Pods-AKNavigationController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AKNavigationController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AKNavigationController_Example/Pods-AKNavigationController_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C52736F21BC6551300373F63 /* AKSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKSampleViewController.h; sourceTree = "<group>"; };
+		C52736F31BC6551300373F63 /* AKSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKSampleViewController.m; sourceTree = "<group>"; };
 		C529CFB21BC25AD300BCB99A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C68757F7DB809B1BC0E11D51 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		F2312FC8689B39BF52C98A06 /* Pods-AKNavigationController_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AKNavigationController_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-AKNavigationController_Tests/Pods-AKNavigationController_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +145,8 @@
 			children = (
 				6003F59C195388D20070C39A /* AKAppDelegate.h */,
 				6003F59D195388D20070C39A /* AKAppDelegate.m */,
+				C52736F21BC6551300373F63 /* AKSampleViewController.h */,
+				C52736F31BC6551300373F63 /* AKSampleViewController.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				C529CFB21BC25AD300BCB99A /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
@@ -389,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C52736F41BC6551300373F63 /* AKSampleViewController.m in Sources */,
 				6003F59E195388D20070C39A /* AKAppDelegate.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
