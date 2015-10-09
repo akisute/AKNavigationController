@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 Ono Masashi. All rights reserved.
 //
 
+#import <AKNavigationController/AKNavigationController.h>
 #import "AKAppDelegate.h"
-#import "AKNavigationController.h"
 #import "AKSampleViewController.h"
 
 @interface AKAppDelegate ()
@@ -22,7 +22,7 @@
 {
     self.navigationController = (AKNavigationController *)self.window.rootViewController;
     
-    AKSampleViewController *sampleViewController1 = [[AKSampleViewController alloc] initWithNibName:nil bundle:nil];
+    AKSampleViewController *sampleViewController1 = [[UIStoryboard storyboardWithName:@"AKSampleViewController" bundle:nil] instantiateInitialViewController];
     [self.navigationController pushViewController:sampleViewController1 animated:NO];
     
     return YES;

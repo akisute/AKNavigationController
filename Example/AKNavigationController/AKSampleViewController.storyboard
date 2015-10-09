@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fHT-t7-Ruw">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Sample View Controller-->
+        <scene sceneID="Hhv-Hv-vgj">
+            <objects>
+                <viewController id="fHT-t7-Ruw" customClass="AKSampleViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rbk-5c-paZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZXi-sJ-zcC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="yV7-zJ-d0f">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MPs-Hw-q4e">
+                                <rect key="frame" x="196" y="28" width="209" height="30"/>
+                                <state key="normal" title="Push Sample View Controller 1"/>
+                                <connections>
+                                    <action selector="onPushSampleViewController1Button:" destination="fHT-t7-Ruw" eventType="touchUpInside" id="iTa-TO-7Jj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MPs-Hw-q4e" firstAttribute="top" secondItem="Rbk-5c-paZ" secondAttribute="bottom" constant="8" id="fm5-ac-NtE"/>
+                            <constraint firstItem="MPs-Hw-q4e" firstAttribute="centerX" secondItem="yV7-zJ-d0f" secondAttribute="centerX" id="nmV-jk-Sea"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pushSampleViewController1Button" destination="MPs-Hw-q4e" id="Vbv-M9-fhx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jue-U7-xri" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="406" y="577"/>
+        </scene>
+    </scenes>
+</document>

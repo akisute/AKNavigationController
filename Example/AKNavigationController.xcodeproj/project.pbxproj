@@ -20,6 +20,7 @@
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
+		C510AE091BC7C86200649780 /* AKSampleViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C510AE081BC7C86200649780 /* AKSampleViewController.storyboard */; settings = {ASSET_TAGS = (); }; };
 		C52736F41BC6551300373F63 /* AKSampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C52736F31BC6551300373F63 /* AKSampleViewController.m */; settings = {ASSET_TAGS = (); }; };
 		C529CFB31BC25AD300BCB99A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C529CFB21BC25AD300BCB99A /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
 		F745C11F4334E86E67377534 /* Pods_AKNavigationController_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24AB53531875FA5558FC8866 /* Pods_AKNavigationController_Tests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -62,6 +63,7 @@
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B264B9371BED9BD1EA534724 /* Pods-AKNavigationController_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AKNavigationController_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AKNavigationController_Example/Pods-AKNavigationController_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		C510AE081BC7C86200649780 /* AKSampleViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AKSampleViewController.storyboard; sourceTree = "<group>"; };
 		C52736F21BC6551300373F63 /* AKSampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKSampleViewController.h; sourceTree = "<group>"; };
 		C52736F31BC6551300373F63 /* AKSampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKSampleViewController.m; sourceTree = "<group>"; };
 		C529CFB21BC25AD300BCB99A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				6003F59D195388D20070C39A /* AKAppDelegate.m */,
 				C52736F21BC6551300373F63 /* AKSampleViewController.h */,
 				C52736F31BC6551300373F63 /* AKSampleViewController.m */,
+				C510AE081BC7C86200649780 /* AKSampleViewController.storyboard */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				C529CFB21BC25AD300BCB99A /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
@@ -281,6 +284,7 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				C529CFB31BC25AD300BCB99A /* LaunchScreen.storyboard in Resources */,
+				C510AE091BC7C86200649780 /* AKSampleViewController.storyboard in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);

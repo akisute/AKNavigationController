@@ -10,4 +10,6 @@
 
 @interface AKSampleViewController : UIViewController
 
++ (nonnull instancetype)instantiateFromStoryboard;
+
 @end

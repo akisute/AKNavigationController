@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "UIViewController+AKNavigationController.h"
+
 @class AKNavigationBar;
 
 @interface AKNavigationController : UIViewController

@@ -19,6 +19,8 @@
 @property (nonatomic, null_unspecified) NSLayoutConstraint *navigationBarHeightConstraint;
 
 @property (nonatomic, null_unspecified) UIView *contentView;
+@property (nonatomic, null_unspecified) NSLayoutConstraint *contentViewTopConstraint;
+@property (nonatomic, null_unspecified) NSLayoutConstraint *contentViewBottomConstraint;
 
 @property (nonatomic, nonnull) AKNavigationControllerAnimator *animator;
 
@@ -72,7 +74,24 @@
         
         NSDictionary *views = @{@"contentView": self.contentView};
         [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[contentView]|" options:0 metrics:nil views:views]];
-        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[contentView]|" options:0 metrics:nil views:views]];
+        
+        self.contentViewTopConstraint = [NSLayoutConstraint constraintWithItem:self.view
+                                                                     attribute:NSLayoutAttributeTop
+                                                                     relatedBy:NSLayoutRelationEqual
+                                                                        toItem:self.contentView
+                                                                     attribute:NSLayoutAttributeTop
+                                                                    multiplier:1.0
+                                                                      constant:0];
+        [self.view addConstraint:self.contentViewTopConstraint];
+        
+        self.contentViewBottomConstraint = [NSLayoutConstraint constraintWithItem:self.view
+                                                                        attribute:NSLayoutAttributeBottom
+                                                                        relatedBy:NSLayoutRelationEqual
+                                                                           toItem:self.contentView
+                                                                        attribute:NSLayoutAttributeBottom
+                                                                       multiplier:1.0
+                                                                         constant:0];
+        [self.view addConstraint:self.contentViewBottomConstraint];
     }
     {
         self.navigationBar = [[AKNavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, kNavigationBarDefaultHeight)];
@@ -106,6 +125,8 @@
 {
     [super viewDidLoad];
     
+    self.view.backgroundColor = [UIColor redColor];
+    
     // If view controller stack is already pushed before the view is loaded, add it to the view hierarchy
     if (self.topViewController) {
         UIViewController *viewController = self.topViewController;
@@ -119,13 +140,13 @@
     }
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)viewWillLayoutSubviews
 {
-    [super viewWillAppear:animated];
+    [super viewWillLayoutSubviews];
     
     CGRect statusBarFrame = [UIApplication sharedApplication].statusBarFrame;
     CGFloat statusBarHeight = MIN(CGRectGetMaxX(statusBarFrame), CGRectGetMaxY(statusBarFrame));
-    [self updateNavigationBarPositionY:0 height:kNavigationBarDefaultHeight+statusBarHeight];
+    [self layoutNavigationBarWithPositionY:0 height:kNavigationBarDefaultHeight+statusBarHeight];
 }
 
 #pragma mark - Public (UINavigationController)
@@ -252,11 +273,43 @@
 
 #pragma mark - Private
 
-- (void)updateNavigationBarPositionY:(CGFloat)positionY height:(CGFloat)height
+- (void)layoutNavigationBarWithPositionY:(CGFloat)positionY height:(CGFloat)height
 {
     self.navigationBarTopConstraint.constant = -positionY; // must be inverted before applying to constant
     self.navigationBarHeightConstraint.constant = height;
+    
+    [self layoutContentView];
     [self.view setNeedsLayout];
+}
+
+- (void)layoutContentView
+{
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
+    // Determine whether the content view should be full screen or not
+    // Currently only supports top edge
+    UIViewController *topViewController = self.topViewController;
+    
+    BOOL wantsFullScreen = (topViewController == nil) || topViewController.wantsFullScreenLayout;
+    BOOL hasOpaqueNavigationBar = YES; // TODO: determine bar type
+    UIRectEdge edgesForExtendedLayout = topViewController.edgesForExtendedLayout;
+    BOOL extendedLayoutIncludesOpaqueBars = topViewController.extendedLayoutIncludesOpaqueBars;
+    
+    BOOL isFullScreen = (wantsFullScreen) || ((edgesForExtendedLayout == UIRectEdgeAll) && (extendedLayoutIncludesOpaqueBars || !hasOpaqueNavigationBar));
+    if (isFullScreen) {
+        self.contentViewTopConstraint.constant = 0;
+        self.contentViewBottomConstraint.constant = 0;
+    } else {
+        if (edgesForExtendedLayout & UIRectEdgeTop) {
+            self.contentViewTopConstraint.constant = -(-self.navigationBarTopConstraint.constant + self.navigationBarHeightConstraint.constant);
+        } else {
+            self.contentViewTopConstraint.constant = 0;
+        }
+        self.contentViewBottomConstraint.constant = 0;
+    }
+    
+    [self.view setNeedsLayout];
+#pragma clang diagnostic pop
 }
 
 @end

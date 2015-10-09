@@ -130,6 +130,8 @@
 		C49C9E78B14453C94A98B94E25BE990D /* SPTExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 694131A803431750CB64C40E6BD66600 /* SPTExample.m */; };
 		C50070DB1BC529850021D8B3 /* AKNavigationControllerAnimator.h in Headers */ = {isa = PBXBuildFile; fileRef = C50070D91BC529850021D8B3 /* AKNavigationControllerAnimator.h */; settings = {ASSET_TAGS = (); }; };
 		C50070DC1BC529850021D8B3 /* AKNavigationControllerAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = C50070DA1BC529850021D8B3 /* AKNavigationControllerAnimator.m */; settings = {ASSET_TAGS = (); }; };
+		C510AE0C1BC7C93400649780 /* UIViewController+AKNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = C510AE0A1BC7C93400649780 /* UIViewController+AKNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C510AE0D1BC7C93400649780 /* UIViewController+AKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C510AE0B1BC7C93400649780 /* UIViewController+AKNavigationController.m */; settings = {ASSET_TAGS = (); }; };
 		C51D127408F04478D3EFF0BBC2C5B2A0 /* FBSnapshotTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FEF21265CF93114F27FBC4F7A00AAFB /* FBSnapshotTestCase.m */; };
 		C529CFAC1BC2578100BCB99A /* AKNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = C529CFAA1BC2578100BCB99A /* AKNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C529CFAD1BC2578100BCB99A /* AKNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C529CFAB1BC2578100BCB99A /* AKNavigationController.m */; settings = {ASSET_TAGS = (); }; };
@@ -373,6 +375,8 @@
 		BE96D2A0FF3BA5183B77AD7F81D1E433 /* Specta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Specta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C50070D91BC529850021D8B3 /* AKNavigationControllerAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKNavigationControllerAnimator.h; sourceTree = "<group>"; };
 		C50070DA1BC529850021D8B3 /* AKNavigationControllerAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKNavigationControllerAnimator.m; sourceTree = "<group>"; };
+		C510AE0A1BC7C93400649780 /* UIViewController+AKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+AKNavigationController.h"; sourceTree = "<group>"; };
+		C510AE0B1BC7C93400649780 /* UIViewController+AKNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+AKNavigationController.m"; sourceTree = "<group>"; };
 		C529CFAA1BC2578100BCB99A /* AKNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKNavigationController.h; sourceTree = "<group>"; };
 		C529CFAB1BC2578100BCB99A /* AKNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKNavigationController.m; sourceTree = "<group>"; };
 		C529CFAE1BC2579B00BCB99A /* AKNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKNavigationBar.h; sourceTree = "<group>"; };
@@ -847,6 +851,8 @@
 				C529CFAF1BC2579C00BCB99A /* AKNavigationBar.m */,
 				C50070D91BC529850021D8B3 /* AKNavigationControllerAnimator.h */,
 				C50070DA1BC529850021D8B3 /* AKNavigationControllerAnimator.m */,
+				C510AE0A1BC7C93400649780 /* UIViewController+AKNavigationController.h */,
+				C510AE0B1BC7C93400649780 /* UIViewController+AKNavigationController.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -898,6 +904,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C510AE0C1BC7C93400649780 /* UIViewController+AKNavigationController.h in Headers */,
 				C529CFAC1BC2578100BCB99A /* AKNavigationController.h in Headers */,
 				C529CFB01BC2579C00BCB99A /* AKNavigationBar.h in Headers */,
 				C50070DB1BC529850021D8B3 /* AKNavigationControllerAnimator.h in Headers */,
@@ -1240,6 +1247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C510AE0D1BC7C93400649780 /* UIViewController+AKNavigationController.m in Sources */,
 				C50070DC1BC529850021D8B3 /* AKNavigationControllerAnimator.m in Sources */,
 				C529CFAD1BC2578100BCB99A /* AKNavigationController.m in Sources */,
 				C529CFB11BC2579C00BCB99A /* AKNavigationBar.m in Sources */,
